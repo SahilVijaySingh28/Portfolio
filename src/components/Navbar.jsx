@@ -127,8 +127,8 @@ const Navbar = () => {
             : 'bg-transparent py-4'
         }`}
       >
-        {/* Subtle noise texture layer */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        {/* Subtle noise texture layer - Using reliable base64 noise to avoid 403 errors */}
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4P///8lbv58AAAAFnRSTlMAzNDU2drb3t/g4eLj5Onq6+zu7+/zR46S+AAAABJ0RVh0U29mdHdhcmUAUGFpbnQuTkVUX073QSMAAAAgSURBVDhPY2BgYGRkYmJmZubmYWFhYmJmZubmYWFhYGBgYAFvAAd0AB93AAAAAElFTkSuQmCC')]" />
         
         {/* Scanline line */}
         <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
