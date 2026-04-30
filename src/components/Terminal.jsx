@@ -171,7 +171,7 @@ const Terminal = () => {
         ])
         break
 
-      case 'hello'
+      case 'hello':
         push([
           { type: 'output', text: ' Hello welcome to my Portolio' },
           { type: 'output', text: ' Good to have you' },
