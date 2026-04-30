@@ -171,6 +171,14 @@ const Terminal = () => {
         ])
         break
 
+      case 'hello'
+        push([
+          { type: 'output', text: ' Hello welcome to my Portolio' },
+          { type: 'output', text: ' Good to have you' },
+          { type: 'system', text: ' Type help to see all the available commands'},
+        ])
+        break
+
       case 'experience':
         push([
           { type: 'system', text: '> Experience' },
