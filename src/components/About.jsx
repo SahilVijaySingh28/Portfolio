@@ -198,7 +198,7 @@ const About = () => {
                     {/* Animated Gradient Text */}
                     <div className="relative inline-block mb-2">
                       <h3 className="text-5xl font-black bg-[length:200%_auto] text-transparent bg-clip-text animate-gradient bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink">
-                        300+
+                        400+
                       </h3>
                     </div>
 
