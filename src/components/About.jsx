@@ -231,7 +231,7 @@ const About = () => {
                   <div className="relative z-10 mt-auto pt-5 border-t border-gray-700/50 w-full flex flex-col items-start">
                     <p className="text-gray-500 text-xs font-bold uppercase tracking-widest mb-1">Current CGPA</p>
                     <div className="text-4xl font-black text-white drop-shadow-md">
-                      8.41<span className="text-gray-600 text-xl font-bold">/10</span>
+                      8.5<span className="text-gray-600 text-xl font-bold">/10</span>
                     </div>
                   </div>
                 </SpotlightCard>
