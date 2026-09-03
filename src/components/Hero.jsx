@@ -51,14 +51,26 @@ const Hero = () => {
   })
 
   useEffect(() => {
+    let frameId = null
+
     const handleMouseMove = (e) => {
-      setMouse({
-        x: (e.clientX / window.innerWidth) * 2 - 1,
-        y: -(e.clientY / window.innerHeight) * 2 + 1
+      if (frameId !== null) return
+
+      frameId = requestAnimationFrame(() => {
+        setMouse({
+          x: (e.clientX / window.innerWidth) * 2 - 1,
+          y: -(e.clientY / window.innerHeight) * 2 + 1
+        })
+        frameId = null
       })
     }
+
     window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove)
+      if (frameId !== null) cancelAnimationFrame(frameId)
+    }
   }, [])
 
   useEffect(() => {
@@ -183,7 +195,7 @@ const Hero = () => {
             <motion.div variants={itemUp} className="flex flex-col sm:flex-row gap-4 mb-10 w-full sm:w-auto">
               <Magnetic>
                 <motion.a
-                  href="/Latest_resume.pdf"
+                  href="/sahilvijaysinghResume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ boxShadow: '0 0 30px rgba(0,240,255,0.35)' }}

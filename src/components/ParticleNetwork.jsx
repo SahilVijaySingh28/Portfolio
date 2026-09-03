@@ -20,7 +20,7 @@ const ParticleNetwork = () => {
           value: "transparent",
         },
       },
-      fpsLimit: 120,
+      fpsLimit: 60,
       interactivity: {
         detectsOn: "window", 
         events: {
@@ -70,9 +70,9 @@ const ParticleNetwork = () => {
         number: {
           density: {
             enable: true,
-            area: 800,
+            area: 1100,
           },
-          value: 80, 
+          value: 50,
         },
         opacity: {
           value: 0.6,

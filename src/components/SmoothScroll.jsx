@@ -29,10 +29,10 @@ const SmoothScroll = ({ children }) => {
     // RAF loop for Lenis
     const raf = (time) => {
       lenis.raf(time)
-      requestAnimationFrame(raf)
+      rafId = requestAnimationFrame(raf)
     }
 
-    requestAnimationFrame(raf)
+    let rafId = requestAnimationFrame(raf)
 
     // Handle scroll-to-hash internally if needed
     const handleHashScroll = () => {
@@ -49,6 +49,7 @@ const SmoothScroll = ({ children }) => {
     window.lenis = lenis
 
     return () => {
+      cancelAnimationFrame(rafId)
       lenis.destroy()
       window.lenis = null
     }
