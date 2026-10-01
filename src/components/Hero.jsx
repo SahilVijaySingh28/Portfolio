@@ -195,7 +195,7 @@ const Hero = () => {
             <motion.div variants={itemUp} className="flex flex-col sm:flex-row gap-4 mb-10 w-full sm:w-auto">
               <Magnetic>
                 <motion.a
-                  href="/Resume_sahilvijaysingh.pdf"
+                  href="/Resume_SahilVijaySingh.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ boxShadow: '0 0 30px rgba(0,240,255,0.35)' }}
